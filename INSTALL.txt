@@ -120,11 +120,11 @@ Add the following to crontab.
 
 Run the server.
 
-$ sudo INSTALLDIR/etc/init.d/panda_server start
+$ sudo INSTALLDIR/etc/rc.d/init.d/panda_server start
 
 Stop the server.
 
-$ sudo INSTALLDIR/etc/init.d/panda_server stop
+$ sudo INSTALLDIR/etc/rc.d/init.d/panda_server stop
 
 
 
