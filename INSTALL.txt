@@ -30,9 +30,6 @@ INSTALLDIR is set to /data/atlpan/srv automatically for RPMs
 2. Modify config files
 
 $ cd INSTALLDIR/etc/panda
-$ mv panda_common.cfg.rpmnew panda_common.cfg
-$ mv panda_server.cfg.rpmnew panda_server.cfg       
-$ mv panda_server-httpd.conf.rpmnew panda_server-httpd.conf        
 $ emacs -nw panda_server.cfg
 
 fix FIXME
@@ -54,8 +51,7 @@ SSLCertificateFile      /etc/httpd/conf/ssl.crt/server.crt
 SSLCertificateKeyFile   /etc/httpd/conf/ssl.key/server.key
 
 $ cd INSTALLDIR/etc/sysconfig
-$ mv panda_server-sysconfig.rpmnew panda_server-sysconfig
-$ emacs -nw panda_server-sysconfig
+$ emacs -nw panda_server
 
 add
 
@@ -124,11 +120,11 @@ Add the following to crontab.
 
 Run the server.
 
-$ sudo INSTALLDIR/etc/init.d/panda_server-ctl start
+$ sudo INSTALLDIR/etc/init.d/panda_server start
 
 Stop the server.
 
-$ sudo INSTALLDIR/etc/init.d/panda_server-ctl stop
+$ sudo INSTALLDIR/etc/init.d/panda_server stop
 
 
 
